@@ -1,0 +1,101 @@
+;
+; nm00j31.inf
+; 
+; NewMind CO.,LTD.
+; NE-420F Printer Driver for Windows x86
+;
+
+[Version]
+Signature="$Windows NT$"
+Provider=%NEWMIND%
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318}
+Class=Printer
+CatalogFile=nm00j31.cat
+DriverVer=03/27/2015,1.0.3
+
+;
+; Manufacturer section.
+;
+
+[Manufacturer]
+%MANUFACTURER%=NewMind
+
+;
+; Model sections.
+;
+
+[NewMind]
+"NewMind NE-420F"=NE420F,NewMind_NE-420F
+
+;
+; Copy Sections
+;
+
+[EDIBLE]
+CopyFiles=DRIVER_FILES,COMMON_FILE,LANGUAGE_MONITOR,COLOR_FILES
+DataSection=DRIVER_DATA
+LanguageMonitor=%LANGMON%
+
+[DRIVER_FILES]
+nm00j3p.dll
+nm00j3d.dll
+nm00j3u.dll
+
+[COMMON_FILE]
+nm00j3u.chm
+libprmw32.dll
+GNXRAW2RPCS.exe
+
+[LANGUAGE_MONITOR]
+nm00j3l.dll
+
+[COLOR_FILES]
+NE420F-1200x1200dpi.icc
+NE420F-600x600dpi.icc
+
+;
+; Data Sections
+;
+
+[DRIVER_DATA]
+DriverFile=nm00j3p.dll
+DataFile=nm00j3d.dll
+ConfigFile=nm00j3u.dll
+HelpFile=nm00j3u.chm
+
+;
+; Call SetupSetDirectoryId with 66000 to set the target directory at runtime
+; (depending on which environment drivers are getting installed)
+;
+
+[DestinationDirs]
+DefaultDestDir=66000
+LANGUAGE_MONITOR=66002
+COLOR_FILES=66003
+
+;
+;  Source Disk Section
+;
+
+[SourceDisksNames.x86]
+1="NewMind Printer Driver Disk",
+
+[SourceDisksFiles.x86]
+nm00j3p.dll=1
+nm00j3d.dll=1
+nm00j3u.dll=1
+nm00j3u.chm=1
+libprmw32.dll=1
+GNXRAW2RPCS.exe=1
+nm00j3l.dll=1
+NE420F-1200x1200dpi.icc=1
+NE420F-600x600dpi.icc=1
+
+;
+; Localizable Strings
+;
+
+[Strings]
+MANUFACTURER="NewMind CO.,LTD."
+LANGMON="NewMind Language Monitor,nm00j3l.dll"
+

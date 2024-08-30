@@ -1,0 +1,13 @@
+﻿printer,shape,type,Maxlayer
+A,Circle,,25
+A,Heart,,25
+A,Macaron,,40
+A,Square,,25
+A,Circle,Re,25
+A,Macaron,Re,40
+A,Heart,Re,25
+A,Square,Re,25
+A,Circle,Stock,25
+A,Heart,Stock,25
+A,Macaron,Stock,40
+A,Square,Stock,25
